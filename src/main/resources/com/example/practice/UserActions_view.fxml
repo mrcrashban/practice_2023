@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="434.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practice.first.UserActionsController">
+   <children>
+      <TableView fx:id="actions_table" layoutY="179.0" prefHeight="254.0" prefWidth="672.0">
+        <columns>
+          <TableColumn fx:id="action_id" prefWidth="101.60003662109375" text="id действия" />
+            <TableColumn fx:id="user_id" prefWidth="118.39996337890625" text="id пользователя" />
+          <TableColumn fx:id="dt" prefWidth="54.39996337890625" text="дата" />
+            <TableColumn fx:id="description" prefWidth="121.5999755859375" text="описание" />
+            <TableColumn fx:id="device_id" prefWidth="175.2000732421875" text="id устройства" />
+            <TableColumn fx:id="versionapp" prefWidth="104.79998779296875" text="версия MP" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="login_choice" layoutX="47.0" layoutY="49.0" prefWidth="150.0" />
+      <ComboBox fx:id="device_name" layoutX="484.0" layoutY="49.0" prefWidth="150.0" />
+      <Label layoutX="271.0" layoutY="6.0" text="Действия за период">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="22.0" text="По логину пользователя:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="487.0" layoutY="22.0" text="По имени устройства:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="82.0" text="Период времени:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="start_date" layoutX="75.0" layoutY="110.0" />
+      <DatePicker fx:id="finish_date" layoutX="438.0" layoutY="110.0" />
+      <Label layoutX="57.0" layoutY="115.0" text="C">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="419.0" layoutY="115.0" text="по">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="recieve_button_login" layoutX="89.0" layoutY="146.0" mnemonicParsing="false" text="Получить по логину">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="recieve_button_device" layoutX="415.0" layoutY="146.0" mnemonicParsing="false" text="Получить по имени устройства">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
